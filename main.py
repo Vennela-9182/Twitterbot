@@ -1,14 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-
+import os
+from dotenv import load_dotenv
 
 import time
 PROMISED_DOWN = 150
 PROMISED_UP = 10
-
-TWITTER_EMAIL = "kadavakollasirivennela@gamil.com"
-TWITTER_PASSWORD = "Siri9182"
+load_dotenv()
+TWITTER_EMAIL = os.getenv("email")
+TWITTER_PASSWORD = os.getenv("password")
 
 class InternetSpeedTwitterBot:
     def __init__(self):
